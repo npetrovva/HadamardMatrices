@@ -301,37 +301,6 @@ int main(int argc, char *argv[]) {
                 }
                     
             }
-            //flag = 0;
-
-            /*for (int i = 0; i < N; i++) {
-                if (!flag) {
-                    //H_0[i] = 0;
-                    for (int j = 0; j < N + 1; j++) {
-                        int a = in.get();
-                        if (in.good()) {
-                            if (a == 10) {
-                                break;
-                            }
-                            a -= 48;
-                            if (a == 1) {
-                                H_0[i] |= (uint64_t)1;
-                                if (j < N - 1) {
-                                    H_0[i] <<= 1;
-                                }
-                            } else {
-                                H_0[i] |= (uint64_t)0;
-                                if (j < N - 1) {
-                                    H_0[i] <<= 1;
-                                }
-                            }
-
-                        } else {
-                            flag = 1;
-                            break;
-                        }
-                    }   
-                }
-            }*/
             
             cout << "Matrix H0: " << endl;
             for (int i = 0; i < N; i++) {
