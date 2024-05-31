@@ -405,11 +405,7 @@ set<deque<uint64_t>> FindH4ALL(uint64_t *array) {
                     matrixH4num.push_back(j);
                     matrixH4num.push_back(k);
                     matrixH4num.push_back(l);
-                    //memmove(newar, array, sizeof(array));
-                    //for (int z = 0; z < N; z++) {
-                    //    cout << "her " << array[z] << " ";
-                    //}
-                    //cout << endl;
+                
                     FindH4PermCol(array, matrixSquare, matrixH4num, result);
                 }
             }
@@ -605,51 +601,34 @@ int main() {
                                         counter += 8;
                                     } else {
                                         counter += 8;
-                                        //cout << "NOT G4" << endl;
-                                       // PrintM(dqFin);
                                         continue;
                                     }
                                 } else {
                                     counter += 8;
-                                    //cout << "NOT G3" << endl;
-                                    //PrintM(dqFin);
                                     continue;
                                 }
                             } else {
                                 counter += 8;
-                                //cout << "NOT G2" << endl;
-                                //PrintM(dqFin);
                                 continue;
                             }
                         } else {
                             counter += 8;
-                            //cout << "NOT G1" << endl;
-                            //PrintM(dqFin);
                             continue;
                         }
                     } else {
                         counter += 8;
-                        //cout << "NOT G4 -1" << endl;
-                        //PrintM(dq);
                         continue;
                     }
                 } else {
                     counter += 8;
-                    //cout << "NOT G3 -1" << endl;
-                    //PrintM(dq);
                     continue;
                 }
             } else {
                 counter += 8;
-                //cout << "NOT G2 -1" << endl;
-                //PrintM(dq);
                 continue;
             } 
         } else {
             counter += 8;
-            //cout << "NOT G1 -1" << endl;
-            //WriteToFile(dq, counter);
-            //PrintM(dq);
             continue;
         }
                         
