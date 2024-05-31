@@ -97,16 +97,8 @@ bool ChecktheStruct(uint64_t *matrix, int k, uint64_t *matrix_sort) {
                 m++;
             }
         }
-        /*
-        if (v - u == 1) {
-            cout << "1. " << "v = " << v << " " << "u = " << u << endl;
-            //PrintMatrix(matrix_sort);
-            //memmove(matrix, matrix_sort, N * sizeof(uint64_t));
-            return true;*/
-        /*if  (v - u != 1) {
-            cout << "1. " << "v = " << v << " " << "u = " << u << endl;
-            return false;
-        }*/
+
+    
         if (l != m)
             return false;
      
@@ -126,11 +118,7 @@ bool ChecktheStruct(uint64_t *matrix, int k, uint64_t *matrix_sort) {
         if (l != m && l != 0 && m != 0)
             return false;
         l = 0, m = 0;
-        /*
-        if (v - u != 1) { 
-            cout << "2. " << "v = " << v << " " << "u = " << u << endl;
-            return false;
-        }*/
+      
         u = N - 1, v = N/2;
         for (int i = N/2; i < N; i++) {
             if (((matrix_col[i] & mask) >> (N - 3)) == 1) {
@@ -144,16 +132,7 @@ bool ChecktheStruct(uint64_t *matrix, int k, uint64_t *matrix_sort) {
         }
         if (l != m && l != 0 && m != 0) 
             return false;
-        /*
-        if (v - u != 1) {
-            cout << "2. " << "v = " << v << " " << "u = " << u << endl;
-            return false;
-        }*/
-        //cout << "The sec iter" << endl;
-        //PrintMatrix(matrix_sort);
-        //memmove(matrix, matrix_sort, N * sizeof(uint64_t));
-        //cout << "2. " << "v = " << v << " " << "u = " << u << endl;
-        //return true;
+      
     
     } else if (k == 3) {
         mask >>= 1;
@@ -186,10 +165,7 @@ bool ChecktheStruct(uint64_t *matrix, int k, uint64_t *matrix_sort) {
             }
 
         }
-        /*if (v - u != 1) {
-            cout << "3. " << "v = " << v << " " << "u = " << u << endl;
-            return false;
-        }*/
+      
         if (l > 0 && m > 0)
             return false;
         l = 0, m = 0;
@@ -224,15 +200,7 @@ bool ChecktheStruct(uint64_t *matrix, int k, uint64_t *matrix_sort) {
         }
         if (l > 0 && m > 0)
             return false;
-        /*if (v - u != 1) {
-            cout << "3. " << "v = " << v << " " << "u = " << u << endl;
-            return false;
-        }*/
-        //cout << "The third iter" << endl;
-        //PrintMatrix(matrix_sort);
-        //memmove(matrix, matrix_sort, N * sizeof(uint64_t));
-        //cout << "3. " << "v = " << v << " " << "u = " << u << endl;
-        //return true;
+       
     }
     return true;
 
